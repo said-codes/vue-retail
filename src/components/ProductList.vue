@@ -9,14 +9,15 @@
                 <tr>Actions</tr>
             </thead>
             <tbody>
-                <tr v-for="product in products" :key="product.id"></tr>
-                <td>{{ product.name }}</td>
-                <td>{{ product.price }}</td>
-                <td>{{ product.description }}</td>
-                <td>
-                    <button class="btn-small" @click="editProduct(product.id)">Edit</button>
-                    <button class="btn-small btn-danger" @click="deleteProduct(product.id)">Delete</button>
-                </td>
+                <tr v-for="product in products" :key="product.id">
+                    <td>{{ product.name }}</td>
+                    <td>{{ product.price }}</td>
+                    <td>{{ product.description }}</td>
+                    <td>
+                        <button class="btn-small" @click="editProduct(product.id)">Edit</button>
+                        <button class="btn-small btn-danger" @click="deleteProduct(product.id)">Delete</button>
+                    </td>
+                </tr>
             </tbody>
         </table>
         <button @click="showAddProduct == true">Add new Product</button>
